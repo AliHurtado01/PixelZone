@@ -1,3 +1,4 @@
+/* General */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
@@ -5,58 +6,95 @@ body {
   margin: 0;
   padding: 0;
 }
+/* Sticky Header */
+.sticky-header {
+  background-color: #1f1f1f;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
 
-header div h1 {
-  text-align: center;
+/* Elimina cualquier conflicto */
+header {
+  background-color: #1f1f1f;
+  padding: 1rem 0;
+}
+
+/* Navbar (ya lo tienes bien) */
+.navbar {
+  background-color: transparent !important; /* Para que no se duplique el color si ya lo da el header */
+}
+/* Logo */
+.logo {
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    height: 70px;
+  }
+}
+
+@media (min-width: 992px) {
+  .logo {
+    height: 100px;
+  }
+}
+
+/* Header */
+header h1 {
   margin: 0;
-  color: #00ffcc;
+  color: #35a092;
   font-size: 2.2rem;
+  font-weight: bold;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 0;
-  margin: 1rem 0 0 0;
+/* Bootstrap navbar overrides */
+.navbar {
+  background-color: #1f1f1f !important;
 }
 
-nav a {
-  text-decoration: none;
+.navbar-nav .nav-link {
   color: #f5f5f5;
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #00ffcc;
+.navbar-nav .nav-link:hover {
+  color: #27776c;
 }
 
+/* Main */
 main {
   padding: 2rem;
 }
 
+/* Footer */
 footer {
   background-color: #1f1f1f;
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
   color: #aaa;
-  
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  header h1 {
+    flex-basis: 100%;
+    order: 2;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
   main {
     padding: 1rem;
-  }
-
-  header, footer {
-    text-align: center;
   }
 }
 
@@ -65,12 +103,27 @@ footer {
     font-size: 1.5rem;
   }
 
-  nav ul {
-    gap: 0.5rem;
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
   }
 
   iframe {
     width: 100%;
     height: auto;
   }
+}
+/* Personalización del botón hamburguesa */
+.navbar-toggler {
+  background-color: #27776c !important; /* turquesa oscuro */
+  border: 1px solid #fff !important;
+  border-radius: 5px !important;
+  padding: 0.4rem 0.6rem !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }

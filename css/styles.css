@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 /* Sticky Header */
 .sticky-header {
   background-color: #1f1f1f;
@@ -22,8 +23,10 @@ header {
 
 /* Navbar (ya lo tienes bien) */
 .navbar {
-  background-color: transparent !important; /* Para que no se duplique el color si ya lo da el header */
+  background-color: transparent !important;
+  /* Para que no se duplique el color si ya lo da el header */
 }
+
 /* Logo */
 .logo {
   height: 40px;
@@ -77,6 +80,29 @@ footer {
   color: #aaa;
 }
 
+/* Footer Redes Sociales */
+footer .social-icons {
+  margin-top: 0.5rem;
+}
+
+footer .social-icons a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  /* Blanco en fondo oscuro */
+}
+
+footer .social-icons a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
 /* Responsive adjustments */
 @media (max-width: 992px) {
   header h1 {
@@ -84,15 +110,17 @@ footer {
     text-align: center;
     font-size: 1.8rem;
   }
+
   #navbarMenu {
     position: absolute;
     right: 0;
     top: 100%;
     z-index: 1050;
-    background-color: #212529; /* fondo oscuro Bootstrap */
+    background-color: #212529;
+    /* fondo oscuro Bootstrap */
     padding: 1rem;
     border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     min-width: 220px;
   }
 
@@ -129,10 +157,14 @@ footer {
     width: 100%;
     height: auto;
   }
+
+  
 }
+
 /* Personalización del botón hamburguesa */
 .navbar-toggler {
-  background-color: #27776c !important; /* turquesa oscuro */
+  background-color: #27776c !important;
+  /* turquesa oscuro */
   border: 1px solid #fff !important;
   border-radius: 5px !important;
   padding: 0.4rem 0.6rem !important;
@@ -140,4 +172,116 @@ footer {
 
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Grid Layout Base */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.grid-header {
+  grid-area: header;
+}
+
+.grid-main {
+  grid-area: main;
+  padding: 2rem;
+}
+
+.grid-footer {
+  grid-area: footer;
+}
+
+/* Secciones principales */
+.bienvenida {
+  text-align: center;
+  padding: 2rem;
+}
+
+.destacados {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 0;
+  color: white;
+}
+
+.producto {
+  background-color: #1f1f1f;
+  border-radius: 1rem;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  color: white;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+    max-height: 180px;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .productos-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .producto {
+    width: 90%;
+  }
+
+  .grid-main {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .productos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .productos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
 }

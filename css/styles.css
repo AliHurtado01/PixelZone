@@ -80,12 +80,26 @@ footer {
 /* Responsive adjustments */
 @media (max-width: 992px) {
   header h1 {
-    flex-basis: 100%;
-    order: 2;
-    margin-top: 10px;
+    margin: 0px;
     text-align: center;
     font-size: 1.8rem;
   }
+  #navbarMenu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1050;
+    background-color: #212529; /* fondo oscuro Bootstrap */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    min-width: 220px;
+  }
+
+  .navbar-nav .nav-link {
+    color: white;
+  }
+
 
   .navbar-collapse {
     justify-content: center;

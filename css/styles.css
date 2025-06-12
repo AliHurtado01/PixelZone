@@ -158,7 +158,7 @@ footer .social-icons a:hover {
     height: auto;
   }
 
-  
+
 }
 
 /* Personalización del botón hamburguesa */
@@ -228,7 +228,6 @@ footer .social-icons a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-    max-height: 180px;
 }
 
 .producto img {
@@ -236,6 +235,11 @@ footer .social-icons a:hover {
   height: auto;
   border-radius: 0.5rem;
   object-fit: cover;
+}
+
+.precio{
+  font-weight:bolder;
+  color: #35a092;
 }
 
 .producto:hover {
@@ -284,4 +288,10 @@ footer .social-icons a:hover {
   .productos-grid {
     grid-template-columns: 1fr;
   }
+}
+
+.banners .carousel-item img {
+  object-fit: cover;
+  width: 400px;
+  height: auto; /* o la altura que prefieras */
 }

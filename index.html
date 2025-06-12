@@ -12,15 +12,29 @@
 
 <body>
   <div class="grid-container">
-    <header class="grid-header sticky-header py-2 border-bottom">
+
+    <!-- Header principal -->
+    <header class="grid-header sticky-header">
       <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
-        <a href="index.html" class="d-flex align-items-center text-decoration-none">
+
+        <!-- Logo -->
+        <a href="index.html" class="d-flex align-items-center text-decoration-none" aria-label="Inicio">
           <img src="./img/logos/logo_peque.png" alt="Logo PixelZone" class="logo me-2">
         </a>
+
+        <!-- Título del sitio -->
         <h1 class="mx-auto my-2 my-lg-0 text-center">PixelZone</h1>
-        <nav class="navbar navbar-expand-lg">
+
+        <!-- Navegación principal -->
+        <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
           <div class="container-fluid px-0 position-relative">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarMenu"
+                    aria-controls="navbarMenu"
+                    aria-expanded="false"
+                    aria-label="Mostrar u ocultar menú de navegación">
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarMenu">
@@ -34,112 +48,112 @@
             </div>
           </div>
         </nav>
+
       </div>
     </header>
 
     <main class="grid-main">
-      <section class="bienvenida">
-        <h2>Bienvenido a PixelZone</h2>
+
+      <!-- Sección de bienvenida -->
+      <section class="bienvenida" aria-labelledby="bienvenida-title">
+        <h2 id="bienvenida-title">Bienvenido a PixelZone</h2>
         <p>Tu tienda gamer de confianza: hardware, periféricos y más, todo para elevar tu experiencia de juego.</p>
         <a href="./pages/productos.html" class="btn btn-primary mt-3">Explorar Productos</a>
       </section>
 
-<section class="banners">
-  <div id="offersCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
+      <!-- Carrusel de promociones -->
+      <section class="banners" aria-label="Promociones destacadas">
+        <div id="offersCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row g-2">
+                <div class="col-12 col-md-4">
+                  <img src="./img/promos/promo1.png" class="d-block w-100 rounded" alt="Oferta 1">
+                </div>
+                <div class="col-12 col-md-4 d-none d-md-block">
+                  <img src="./img/promos/promo2.png" class="d-block w-100 rounded" alt="Oferta 2">
+                </div>
+                <div class="col-12 col-md-4 d-none d-md-block">
+                  <img src="./img/promos/promo3.png" class="d-block w-100 rounded" alt="Oferta 3">
+                </div>
+              </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row g-2">
+                <div class="col-12 col-md-4">
+                  <img src="./img/promos/promo2.png" class="d-block w-100 rounded" alt="Oferta 2">
+                </div>
+                <div class="col-12 col-md-4 d-none d-md-block">
+                  <img src="./img/promos/promo3.png" class="d-block w-100 rounded" alt="Oferta 3">
+                </div>
+                <div class="col-12 col-md-4 d-none d-md-block">
+                  <img src="./img/promos/promo4.png" class="d-block w-100 rounded" alt="Oferta 4">
+                </div>
+              </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="row g-2">
+                <div class="col-12 col-md-4">
+                  <img src="./img/promos/promo3.png" class="d-block w-100 rounded" alt="Oferta 3">
+                </div>
+                <div class="col-12 col-md-4 d-none d-md-block">
+                  <img src="./img/promos/promo4.png" class="d-block w-100 rounded" alt="Oferta 4">
+                </div>
+                <div class="col-12 col-md-4 d-none d-md-block">
+                  <img src="./img/promos/promo5.png" class="d-block w-100 rounded" alt="Oferta 5">
+                </div>
+              </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+              <div class="row g-2">
+                <div class="col-12 col-md-4">
+                  <img src="./img/promos/promo4.png" class="d-block w-100 rounded" alt="Oferta 4">
+                </div>
+                <div class="col-12 col-md-4 d-none d-md-block">
+                  <img src="./img/promos/promo5.png" class="d-block w-100 rounded" alt="Oferta 5">
+                </div>
+                <div class="col-12 col-md-4 d-none d-md-block">
+                  <img src="./img/promos/promo1.png" class="d-block w-100 rounded" alt="Oferta 1">
+                </div>
+              </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+              <div class="row g-2">
+                <div class="col-12 col-md-4">
+                  <img src="./img/promos/promo5.png" class="d-block w-100 rounded" alt="Oferta 5">
+                </div>
+                <div class="col-12 col-md-4 d-none d-md-block">
+                  <img src="./img/promos/promo1.png" class="d-block w-100 rounded" alt="Oferta 1">
+                </div>
+                <div class="col-12 col-md-4 d-none d-md-block">
+                  <img src="./img/promos/promo2.png" class="d-block w-100 rounded" alt="Oferta 2">
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <!-- Slide 1: banners 1,2,3 -->
-      <div class="carousel-item active">
-        <div class="row g-2">
-          <div class="col-12 col-md-4">
-            <img src="./img/promos/promo1.png" class="d-block w-100 rounded" alt="Oferta 1">
-          </div>
-          <div class="col-12 col-md-4 d-none d-md-block">
-            <img src="./img/promos/promo2.png" class="d-block w-100 rounded" alt="Oferta 2">
-          </div>
-          <div class="col-12 col-md-4 d-none d-md-block">
-            <img src="./img/promos/promo3.png" class="d-block w-100 rounded" alt="Oferta 3">
-          </div>
+          <!-- Controles -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#offersCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#offersCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
         </div>
-      </div>
+      </section>
 
-      <!-- Slide 2: banners 2,3,4 -->
-      <div class="carousel-item">
-        <div class="row g-2">
-          <div class="col-12 col-md-4">
-            <img src="./img/promos/promo2.png" class="d-block w-100 rounded" alt="Oferta 2">
-          </div>
-          <div class="col-12 col-md-4 d-none d-md-block">
-            <img src="./img/promos/promo3.png" class="d-block w-100 rounded" alt="Oferta 3">
-          </div>
-          <div class="col-12 col-md-4 d-none d-md-block">
-            <img src="./img/promos/promo4.png" class="d-block w-100 rounded" alt="Oferta 4">
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3: banners 3,4,5 -->
-      <div class="carousel-item">
-        <div class="row g-2">
-          <div class="col-12 col-md-4">
-            <img src="./img/promos/promo3.png" class="d-block w-100 rounded" alt="Oferta 3">
-          </div>
-          <div class="col-12 col-md-4 d-none d-md-block">
-            <img src="./img/promos/promo4.png" class="d-block w-100 rounded" alt="Oferta 4">
-          </div>
-          <div class="col-12 col-md-4 d-none d-md-block">
-            <img src="./img/promos/promo5.png" class="d-block w-100 rounded" alt="Oferta 5">
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 4: banners 4,5,1 -->
-      <div class="carousel-item">
-        <div class="row g-2">
-          <div class="col-12 col-md-4">
-            <img src="./img/promos/promo4.png" class="d-block w-100 rounded" alt="Oferta 4">
-          </div>
-          <div class="col-12 col-md-4 d-none d-md-block">
-            <img src="./img/promos/promo5.png" class="d-block w-100 rounded" alt="Oferta 5">
-          </div>
-          <div class="col-12 col-md-4 d-none d-md-block">
-            <img src="./img/promos/promo1.png" class="d-block w-100 rounded" alt="Oferta 1">
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 5: banners 5,1,2 -->
-      <div class="carousel-item">
-        <div class="row g-2">
-          <div class="col-12 col-md-4">
-            <img src="./img/promos/promo5.png" class="d-block w-100 rounded" alt="Oferta 5">
-          </div>
-          <div class="col-12 col-md-4 d-none d-md-block">
-            <img src="./img/promos/promo1.png" class="d-block w-100 rounded" alt="Oferta 1">
-          </div>
-          <div class="col-12 col-md-4 d-none d-md-block">
-            <img src="./img/promos/promo2.png" class="d-block w-100 rounded" alt="Oferta 2">
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Controles -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#offersCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#offersCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
-  </div>
-</section>
-
-      <section class="destacados">
-        <h3>Productos destacados</h3>
+      <!-- Sección de productos destacados -->
+      <section class="destacados" aria-labelledby="destacados-title">
+        <h3 id="destacados-title">Productos destacados</h3>
         <div class="productos-grid">
+          <!-- Ejemplo de producto -->
           <div class="producto">
             <img src="./img/productos/teclados/teclado2.jpg" alt="Teclado gamer">
             <h4>Mars Gaming MK023, Teclado Gaming TKL</h4>
@@ -232,20 +246,28 @@
           </div>
         </div>
       </section>
+
     </main>
 
-    <footer class="grid-footer">
+    <!-- Pie de página -->
+    <footer class="grid-footer" role="contentinfo">
       <p>&copy; 2025 PixelZone. Todos los derechos reservados.</p>
       <div class="social-icons">
-        <a href="https://www.facebook.com/pixelzone" target="_blank"><img src="./img/logos/facebook.png"
-            alt="Facebook"></a>
-        <a href="https://www.twitter.com/pixelzone" target="_blank"><img src="./img/logos/twitter.png"
-            alt="Twitter"></a>
-        <a href="https://www.instagram.com/pixelzone" target="_blank"><img src="./img/logos/instagram.png"
-            alt="Instagram"></a>
-        <a href="https://www.tiktok.com/pixelzone" target="_blank"><img src="./img/logos/tiktok.png" alt="Tiktok"></a>
+        <a href="https://www.facebook.com/pixelzone" target="_blank" aria-label="Facebook">
+          <img src="./img/logos/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.twitter.com/pixelzone" target="_blank" aria-label="Twitter">
+          <img src="./img/logos/twitter.png" alt="Twitter">
+        </a>
+        <a href="https://www.instagram.com/pixelzone" target="_blank" aria-label="Instagram">
+          <img src="./img/logos/instagram.png" alt="Instagram">
+        </a>
+        <a href="https://www.tiktok.com/pixelzone" target="_blank" aria-label="TikTok">
+          <img src="./img/logos/tiktok.png" alt="TikTok">
+        </a>
       </div>
     </footer>
+
   </div>
 </body>
 

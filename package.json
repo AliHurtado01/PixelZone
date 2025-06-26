@@ -2,9 +2,9 @@
   "name": "pixelzone",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+ "scripts": {
+  "sass": "sass --watch scss:css --no-source-map"
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AliHurtado01/PixelZone.git"
@@ -15,5 +15,9 @@
     "url": "https://github.com/AliHurtado01/PixelZone/issues"
   },
   "homepage": "https://github.com/AliHurtado01/PixelZone#readme",
-  "description": ""
+  "description": "Éste es mi proyecto para CoderHouse de mi web PixelZone, la cual está en desarrollo.",
+  "keywords": [],
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
 }

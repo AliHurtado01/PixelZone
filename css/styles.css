@@ -11,20 +11,22 @@
   --primary-dark: #27776c;
 }
 
+
 /*=============================================
 =             Estilos Generales              =
 =============================================*/
 body {
+  margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-page);
   color: var(--text-light);
-  margin: 0;
-  padding: 0;
 }
 
 main {
   padding: 2rem;
 }
+
 
 /*=============================================
 =                 Layout Grid                =
@@ -40,18 +42,15 @@ main {
 }
 
 .grid-header { grid-area: header; }
-.grid-main {
-  grid-area: main;
-  padding: 2rem;
-}
+.grid-main   { grid-area: main; padding: 2rem; }
 .grid-footer { grid-area: footer; }
+
 
 /*=============================================
 =                 Cabecera                   =
 =============================================*/
-/* Sticky header principal */
-.sticky-header,
-header {
+header,
+.sticky-header {
   background-color: var(--bg-dark);
   position: sticky;
   top: 0;
@@ -59,14 +58,16 @@ header {
   padding: 1rem 0;
 }
 
-/* Logo responsive */
 .logo {
   height: 40px;
 }
-@media (min-width: 768px) { .logo { height: 70px; } }
-@media (min-width: 992px) { .logo { height: 100px; } }
+@media (min-width: 768px) {
+  .logo { height: 70px; }
+}
+@media (min-width: 992px) {
+  .logo { height: 100px; }
+}
 
-/* Título principal */
 header h1 {
   margin: 0;
   color: var(--primary);
@@ -74,33 +75,37 @@ header h1 {
   font-weight: bold;
 }
 
+
 /*=============================================
 =             Navbar (Bootstrap)             =
 =============================================*/
 .navbar {
   background-color: var(--bg-dark) !important;
 }
+
 .navbar-nav .nav-link {
   color: var(--text-light);
   transition: color 0.3s;
 }
+
 .navbar-nav .nav-link:hover {
   color: var(--primary-dark);
 }
 
-/* Botón hamburguesa */
 .navbar-toggler {
   background-color: var(--primary-dark) !important;
   border: 1px solid #fff !important;
   border-radius: 5px !important;
   padding: 0.4rem 0.6rem !important;
 }
+
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
 
+
 /*=============================================
-=                 Secciones                  =
+=             Secciones Principales          =
 =============================================*/
 /* Bienvenida */
 .bienvenida {
@@ -114,7 +119,10 @@ header h1 {
   padding: 0 1rem;
 }
 
-/* Productos */
+
+/*=============================================
+=                 Productos                  =
+=============================================*/
 .productos-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -122,134 +130,47 @@ header h1 {
   padding: 2rem 0;
   color: var(--text-light);
 }
+
 .producto {
   background-color: var(--bg-dark);
   border-radius: 1rem;
-  text-align: center;
   padding: 1rem;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
   transition: transform 0.3s ease;
 }
+
 .producto img {
   width: 100%;
   height: auto;
   border-radius: 0.5rem;
   object-fit: cover;
 }
+
 .precio {
   font-weight: bolder;
   color: var(--primary);
 }
+
 .producto:hover {
   transform: scale(1.05);
 }
 
-/* Banners / Carrusel */
+/*=============================================
+=             Banners / Carrusel             =
+=============================================*/
 .banners .carousel-item img {
-  object-fit: cover;
   width: 400px;
   height: auto;
+  object-fit: cover;
 }
+
 
 /*=============================================
-=                  Footer                    =
+=                  Mapa                      =
 =============================================*/
-footer {
-  background-color: var(--bg-dark);
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  color: var(--text-muted);
-}
-footer .social-icons {
-  margin-top: 0.5rem;
-}
-footer .social-icons a {
-  margin: 0 0.5rem;
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-footer .social-icons img {
-  width: 30px;
-  height: 30px;
-  filter: brightness(0) invert(1);
-}
-footer .social-icons a:hover {
-  transform: scale(1.2);
-  opacity: 0.8;
-}
-
-/*=============================================
-=          Media Queries (Responsive)        =
-=============================================*/
-@media (max-width: 1200px) {
-  .productos-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  /* Ajustes de logo ya cubiertos en min-width */
-  /* Menú desplegable custom */
-  header h1 {
-    margin: 0;
-    text-align: center;
-    font-size: 1.8rem;
-  }
-  #navbarMenu {
-    position: absolute;
-    right: 0;
-    top: 100%;
-    z-index: 1050;
-    background-color: var(--bg-bootstrap);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    min-width: 220px;
-  }
-  .navbar-collapse {
-    justify-content: center;
-  }
-  .productos-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  main,
-  .grid-main {
-    padding: 1rem;
-  }
-  header h1 {
-    font-size: 1.5rem;
-  }
-  .productos-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-  .navbar-nav {
-    text-align: center;
-  }
-  .navbar-nav .nav-link {
-    padding: 0.5rem 1rem;
-  }
-  iframe {
-    width: 100%;
-    height: auto;
-  }
-  .productos-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* --- Sección del mapa --- */
 #mapa {
   margin: 4rem auto;
   max-width: 1200px;
@@ -260,14 +181,12 @@ footer .social-icons a:hover {
 .map-container {
   position: relative;
   width: 100%;
-  /* 16:9 — mantiene la proporción en responsive */
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* 16:9 */
   overflow: hidden;
-  border-radius: 0.75rem;      /* mismo radio que uses en tus tarjetas */
-  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-/* El iframe se expande dentro del contenedor */
 .map-container iframe {
   position: absolute;
   top: 0;
@@ -281,4 +200,112 @@ footer .social-icons a:hover {
   margin-top: 0.75rem;
   font-weight: 500;
   letter-spacing: .4px;
+}
+
+
+/*=============================================
+=                  Footer                    =
+=============================================*/
+footer {
+  background-color: var(--bg-dark);
+  color: var(--text-muted);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer .social-icons {
+  margin-top: 0.5rem;
+}
+
+footer .social-icons a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+footer .social-icons a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+
+/*=============================================
+=          Media Queries (Responsive)        =
+=============================================*/
+@media (max-width: 1200px) {
+  .productos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  #navbarMenu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1050;
+    background-color: var(--bg-bootstrap);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+  }
+
+  .productos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  main,
+  .grid-main {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
 }

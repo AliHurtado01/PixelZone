@@ -1,275 +1,456 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PixelZone - Inicio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!--<link rel="stylesheet" href="./css/styles.css" />-->
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+      defer
+    ></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PixelZone - Inicio</title>
-  <!--<link rel="stylesheet" href="./css/styles.css" />-->
-  <link rel="stylesheet" href="./css/estilos.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" defer></script>
-</head>
+  <body>
+    <div class="grid-container">
+      <!-- Header principal -->
+      <header class="grid-header sticky-header">
+        <div
+          class="container-fluid d-flex justify-content-between align-items-center flex-wrap"
+        >
+          <!-- Logo -->
+          <a
+            href="index.html"
+            class="d-flex align-items-center text-decoration-none"
+            aria-label="Inicio"
+          >
+            <img
+              src="./img/logos/logo_peque.png"
+              alt="Logo PixelZone"
+              class="logo me-2"
+            />
+          </a>
 
-<body>
-  <div class="grid-container">
+          <!-- Título del sitio -->
+          <h1 class="mx-auto my-2 my-lg-0 text-center">PixelZone</h1>
 
-    <!-- Header principal -->
-    <header class="grid-header sticky-header">
-      <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
+          <!-- Navegación principal -->
+          <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
+            <div class="container-fluid px-0 position-relative">
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu"
+                aria-controls="navbarMenu"
+                aria-expanded="false"
+                aria-label="Mostrar u ocultar menú de navegación"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/productos.html"
+                      >Productos</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/ofertas.html">Ofertas</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/nosotros.html"
+                      >Nosotros</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./pages/contacto.html"
+                      >Contacto</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </header>
 
-        <!-- Logo -->
-        <a href="index.html" class="d-flex align-items-center text-decoration-none" aria-label="Inicio">
-          <img src="./img/logos/logo_peque.png" alt="Logo PixelZone" class="logo me-2">
-        </a>
+      <main class="grid-main">
+        <!-- Sección de bienvenida -->
+        <section class="bienvenida" aria-labelledby="bienvenida-title">
+          <h2 id="bienvenida-title">Bienvenido a PixelZone</h2>
+          <p>
+            Tu tienda gamer de confianza: hardware, periféricos y más, todo para
+            elevar tu experiencia de juego.
+          </p>
+          <a href="./pages/productos.html" class="btn btn-primary mt-3"
+            >Explorar Productos</a
+          >
+        </section>
 
-        <!-- Título del sitio -->
-        <h1 class="mx-auto my-2 my-lg-0 text-center">PixelZone</h1>
+        <!-- Carrusel de promociones -->
+        <section class="banners" aria-label="Promociones destacadas">
+          <div
+            id="offersCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+                <div class="row g-2">
+                  <div class="col-12 col-md-4">
+                    <img
+                      src="./img/promos/promo1.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 1"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 d-none d-md-block">
+                    <img
+                      src="./img/promos/promo2.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 2"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 d-none d-md-block">
+                    <img
+                      src="./img/promos/promo3.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 3"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="row g-2">
+                  <div class="col-12 col-md-4">
+                    <img
+                      src="./img/promos/promo2.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 2"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 d-none d-md-block">
+                    <img
+                      src="./img/promos/promo3.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 3"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 d-none d-md-block">
+                    <img
+                      src="./img/promos/promo4.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 4"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="carousel-item">
+                <div class="row g-2">
+                  <div class="col-12 col-md-4">
+                    <img
+                      src="./img/promos/promo3.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 3"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 d-none d-md-block">
+                    <img
+                      src="./img/promos/promo4.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 4"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 d-none d-md-block">
+                    <img
+                      src="./img/promos/promo5.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 5"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="carousel-item">
+                <div class="row g-2">
+                  <div class="col-12 col-md-4">
+                    <img
+                      src="./img/promos/promo4.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 4"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 d-none d-md-block">
+                    <img
+                      src="./img/promos/promo5.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 5"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 d-none d-md-block">
+                    <img
+                      src="./img/promos/promo1.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 1"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 5 -->
+              <div class="carousel-item">
+                <div class="row g-2">
+                  <div class="col-12 col-md-4">
+                    <img
+                      src="./img/promos/promo5.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 5"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 d-none d-md-block">
+                    <img
+                      src="./img/promos/promo1.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 1"
+                    />
+                  </div>
+                  <div class="col-12 col-md-4 d-none d-md-block">
+                    <img
+                      src="./img/promos/promo2.png"
+                      class="d-block w-100 rounded"
+                      alt="Oferta 2"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <!-- Navegación principal -->
-        <nav class="navbar navbar-expand-lg" aria-label="Menú principal">
-          <div class="container-fluid px-0 position-relative">
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarMenu"
-                    aria-controls="navbarMenu"
-                    aria-expanded="false"
-                    aria-label="Mostrar u ocultar menú de navegación">
-              <span class="navbar-toggler-icon"></span>
+            <!-- Controles -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#offersCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Anterior</span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarMenu">
-              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/productos.html">Productos</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/ofertas.html">Ofertas</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/nosotros.html">Nosotros</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">Contacto</a></li>
-              </ul>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#offersCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Sección de productos destacados -->
+        <section class="destacados" aria-labelledby="destacados-title">
+          <h3 id="destacados-title">Productos destacados</h3>
+          <div class="productos-grid">
+            <!-- Ejemplo de producto -->
+            <div class="producto">
+              <img
+                src="./img/productos/teclados/teclado2.jpg"
+                alt="Teclado gamer"
+              />
+              <h4>Mars Gaming MK023, Teclado Gaming TKL</h4>
+              <p>Respuesta lineal, color blanco, anti-ghosting.</p>
+              <p class="precio">10,90€</p>
+            </div>
+            <div class="producto">
+              <img
+                src="./img/productos/teclados/teclado1.jpg"
+                alt="Teclado gamer"
+              />
+              <h4>Teclado Logitech G213 Prodigy</h4>
+              <p>Respuesta táctil y máxima velocidad, con reposamuñecas.</p>
+              <p class="precio">50,99€</p>
+            </div>
+            <div class="producto">
+              <img
+                src="./img/productos/teclados/teclado3.jpg"
+                alt="Teclado gamer"
+              />
+              <h4>Corsair K55 RGB PRO</h4>
+              <p>Teclado para juegos con teclas de membrana.</p>
+              <p class="precio">64,99€</p>
+            </div>
+            <div class="producto">
+              <img src="./img/productos/ratones/mouse1.jpg" alt="Mouse Gamer" />
+              <h4>Mouse Razer DeathAdder Essential</h4>
+              <p>
+                Ratón Gaming con sensor óptico, 6400 DPI, 5 botones
+                programables, Negro
+              </p>
+              <p class="precio">19,99€</p>
+            </div>
+            <div class="producto">
+              <img src="./img/productos/ratones/mouse2.jpg" alt="Mouse gamer" />
+              <h4>Logitech G502 HERO</h4>
+              <p>
+                Ratón Gaming con Cable Alto Rendimiento, 25,600 DPI, RGB, Peso
+                Personalizable.
+              </p>
+              <p class="precio">41,12€</p>
+            </div>
+            <div class="producto">
+              <img src="./img/productos/ratones/mouse3.jpg" alt="Mouse gamer" />
+              <h4>Ratón gaming Glorious Model O</h4>
+              <p>
+                Ratón gaming inalámbrico - 69 g superligero, diseño colmena,
+                RGB, ambidiestro.
+              </p>
+              <p class="precio">59,99€</p>
+            </div>
+            <div class="producto">
+              <img
+                src="./img/productos/audifonos/auriculares1.jpg"
+                alt="Auriculares"
+              />
+              <h4>Auriculares Razer Barracuda X</h4>
+              <p>
+                Auriculares Inalámbricos Multiplataforma para Juegos y Móviles,
+                SmartSwitch Dual Wireless.
+              </p>
+              <p class="precio">88,99€</p>
+            </div>
+            <div class="producto">
+              <img
+                src="./img/productos/audifonos/auriculares2.jpg"
+                alt="Auriculares"
+              />
+              <h4>AuricularesLogitech G G435</h4>
+              <p>
+                Gaming, Ligeros, micrófono integrado, Batería de 18 horas,
+                Compatibles con Dolby Atmos.
+              </p>
+              <p class="precio">52,99€</p>
+            </div>
+            <div class="producto">
+              <img
+                src="./img/productos/audifonos/auriculares3.jpg"
+                alt="Auriculares"
+              />
+              <h4>Auriculares HyperX Cloud Stinger 2 Core</h4>
+              <p>
+                Cascos gaming para PC, Drivers de 40 mm y Audio Envolvente,
+                3.5mm.
+              </p>
+              <p class="precio">34,99€</p>
+            </div>
+            <div class="producto">
+              <img src="./img/productos/pantallas/monitor1.jpg" alt="Monitor" />
+              <h4>Philips 27E1N5500LA</h4>
+              <p>
+                Monitor QHD de 27 Pulgadas, VA, 1 ms, 75 Hz, Altavoces, Altura
+                Ajustable.
+              </p>
+              <p class="precio">139,00€</p>
+            </div>
+            <div class="producto">
+              <img src="./img/productos/pantallas/monitor2.jpg" alt="Monitor" />
+              <h4>AOC Gaming Q27G4XD</h4>
+              <p>
+                27 Pulgadas, 180 Hz, 1 ms GTG, Fast IPS, FreeSync Prem, G-Sync
+                Comp, HDR400.
+              </p>
+              <p class="precio">189,00€</p>
+            </div>
+            <div class="producto">
+              <img src="./img/productos/pantallas/monitor3.jpg" alt="Monitor" />
+              <h4>SAMSUNG Odyssey G3 LS27DG300EUXEN</h4>
+              <p>
+                27" Full HD (1920 x 1080, 16:9, 180Hz, 1ms, Panel IPS, AMD
+                FreeSync, Modo Eye Saver, Flicker Free).
+              </p>
+              <p class="precio">119,00€</p>
+            </div>
+            <div class="producto">
+              <img src="./img/productos/mandos/mando1.jpg" alt="Mando" />
+              <h4>Xbox Wireless Controller</h4>
+              <p>
+                Electric Volt para Xbox Series X|S, Xbox One, Windows 10/11, iOS
+                y Android.
+              </p>
+              <p class="precio">49,99€</p>
+            </div>
+            <div class="producto">
+              <img src="./img/productos/mandos/mando2.jpg" alt="Mando" />
+              <h4>PlayStation 5 DualSense Starlight Blue</h4>
+              <p>
+                Mando Original Sony para PS5 con Retroalimentación Háptica y
+                gatillos Adaptativos.
+              </p>
+              <p class="precio">59,99€</p>
+            </div>
+            <div class="producto">
+              <img src="./img/productos/mandos/mando3.jpg" alt="Mando" />
+              <h4>Nintendo Switch - Mando Pro</h4>
+              <p>
+                Controller Edición Limitada The Legend of Zelda: Tears of the
+                Kingdom.
+              </p>
+              <p class="precio">145,00€</p>
             </div>
           </div>
-        </nav>
+        </section>
+      </main>
 
-      </div>
-    </header>
-
-    <main class="grid-main">
-
-      <!-- Sección de bienvenida -->
-      <section class="bienvenida" aria-labelledby="bienvenida-title">
-        <h2 id="bienvenida-title">Bienvenido a PixelZone</h2>
-        <p>Tu tienda gamer de confianza: hardware, periféricos y más, todo para elevar tu experiencia de juego.</p>
-        <a href="./pages/productos.html" class="btn btn-primary mt-3">Explorar Productos</a>
-      </section>
-
-      <!-- Carrusel de promociones -->
-      <section class="banners" aria-label="Promociones destacadas">
-        <div id="offersCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <!-- Slide 1 -->
-            <div class="carousel-item active">
-              <div class="row g-2">
-                <div class="col-12 col-md-4">
-                  <img src="./img/promos/promo1.png" class="d-block w-100 rounded" alt="Oferta 1">
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <img src="./img/promos/promo2.png" class="d-block w-100 rounded" alt="Oferta 2">
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <img src="./img/promos/promo3.png" class="d-block w-100 rounded" alt="Oferta 3">
-                </div>
-              </div>
-            </div>
-            <!-- Slide 2 -->
-            <div class="carousel-item">
-              <div class="row g-2">
-                <div class="col-12 col-md-4">
-                  <img src="./img/promos/promo2.png" class="d-block w-100 rounded" alt="Oferta 2">
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <img src="./img/promos/promo3.png" class="d-block w-100 rounded" alt="Oferta 3">
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <img src="./img/promos/promo4.png" class="d-block w-100 rounded" alt="Oferta 4">
-                </div>
-              </div>
-            </div>
-            <!-- Slide 3 -->
-            <div class="carousel-item">
-              <div class="row g-2">
-                <div class="col-12 col-md-4">
-                  <img src="./img/promos/promo3.png" class="d-block w-100 rounded" alt="Oferta 3">
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <img src="./img/promos/promo4.png" class="d-block w-100 rounded" alt="Oferta 4">
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <img src="./img/promos/promo5.png" class="d-block w-100 rounded" alt="Oferta 5">
-                </div>
-              </div>
-            </div>
-            <!-- Slide 4 -->
-            <div class="carousel-item">
-              <div class="row g-2">
-                <div class="col-12 col-md-4">
-                  <img src="./img/promos/promo4.png" class="d-block w-100 rounded" alt="Oferta 4">
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <img src="./img/promos/promo5.png" class="d-block w-100 rounded" alt="Oferta 5">
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <img src="./img/promos/promo1.png" class="d-block w-100 rounded" alt="Oferta 1">
-                </div>
-              </div>
-            </div>
-            <!-- Slide 5 -->
-            <div class="carousel-item">
-              <div class="row g-2">
-                <div class="col-12 col-md-4">
-                  <img src="./img/promos/promo5.png" class="d-block w-100 rounded" alt="Oferta 5">
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <img src="./img/promos/promo1.png" class="d-block w-100 rounded" alt="Oferta 1">
-                </div>
-                <div class="col-12 col-md-4 d-none d-md-block">
-                  <img src="./img/promos/promo2.png" class="d-block w-100 rounded" alt="Oferta 2">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Controles -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#offersCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#offersCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-          </button>
+      <!-- Pie de página -->
+      <footer class="grid-footer" role="contentinfo">
+        <p>&copy; 2025 PixelZone. Todos los derechos reservados.</p>
+        <div class="social-icons">
+          <a
+            href="https://www.facebook.com/pixelzone"
+            target="_blank"
+            aria-label="Facebook"
+          >
+            <img src="./img/logos/facebook.png" alt="Facebook" />
+          </a>
+          <a
+            href="https://www.twitter.com/pixelzone"
+            target="_blank"
+            aria-label="Twitter"
+          >
+            <img src="./img/logos/twitter.png" alt="Twitter" />
+          </a>
+          <a
+            href="https://www.instagram.com/pixelzone"
+            target="_blank"
+            aria-label="Instagram"
+          >
+            <img src="./img/logos/instagram.png" alt="Instagram" />
+          </a>
+          <a
+            href="https://www.tiktok.com/pixelzone"
+            target="_blank"
+            aria-label="TikTok"
+          >
+            <img src="./img/logos/tiktok.png" alt="TikTok" />
+          </a>
         </div>
-      </section>
-
-      <!-- Sección de productos destacados -->
-      <section class="destacados" aria-labelledby="destacados-title">
-        <h3 id="destacados-title">Productos destacados</h3>
-        <div class="productos-grid">
-          <!-- Ejemplo de producto -->
-          <div class="producto">
-            <img src="./img/productos/teclados/teclado2.jpg" alt="Teclado gamer">
-            <h4>Mars Gaming MK023, Teclado Gaming TKL</h4>
-            <p>Respuesta lineal, color blanco, anti-ghosting.</p>
-            <p class="precio">10,90€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/teclados/teclado1.jpg" alt="Teclado gamer">
-            <h4>Teclado Logitech G213 Prodigy</h4>
-            <p>Respuesta táctil y máxima velocidad, con reposamuñecas.</p>
-            <p class="precio">50,99€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/teclados/teclado3.jpg" alt="Teclado gamer">
-            <h4>Corsair K55 RGB PRO</h4>
-            <p>Teclado para juegos con teclas de membrana.</p>
-            <p class="precio">64,99€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/ratones/mouse1.jpg" alt="Mouse Gamer">
-            <h4>Mouse Razer DeathAdder Essential</h4>
-            <p>Ratón Gaming con sensor óptico, 6400 DPI, 5 botones programables, Negro</p>
-            <p class="precio">19,99€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/ratones/mouse2.jpg" alt="Mouse gamer">
-            <h4>Logitech G502 HERO</h4>
-            <p>Ratón Gaming con Cable Alto Rendimiento, 25,600 DPI, RGB, Peso Personalizable.</p>
-            <p class="precio">41,12€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/ratones/mouse3.jpg" alt="Mouse gamer">
-            <h4>Ratón gaming Glorious Model O</h4>
-            <p>Ratón gaming inalámbrico - 69 g superligero, diseño colmena, RGB, ambidiestro.</p>
-            <p class="precio">59,99€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/audifonos/auriculares1.jpg" alt="Auriculares">
-            <h4>Auriculares Razer Barracuda X</h4>
-            <p>Auriculares Inalámbricos Multiplataforma para Juegos y Móviles, SmartSwitch Dual Wireless.</p>
-            <p class="precio">88,99€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/audifonos/auriculares2.jpg" alt="Auriculares">
-            <h4> AuricularesLogitech G G435</h4>
-            <p>Gaming, Ligeros, micrófono integrado, Batería de 18 horas, Compatibles con Dolby Atmos.</p>
-            <p class="precio">52,99€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/audifonos/auriculares3.jpg" alt="Auriculares">
-            <h4>Auriculares HyperX Cloud Stinger 2 Core</h4>
-            <p>Cascos gaming para PC, Drivers de 40 mm y Audio Envolvente, 3.5mm.</p>
-            <p class="precio">34,99€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/pantallas/monitor1.jpg" alt="Monitor">
-            <h4>Philips 27E1N5500LA</h4>
-            <p>Monitor QHD de 27 Pulgadas, VA, 1 ms, 75 Hz, Altavoces, Altura Ajustable.</p>
-            <p class="precio">139,00€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/pantallas/monitor2.jpg" alt="Monitor">
-            <h4>AOC Gaming Q27G4XD</h4>
-            <p>27 Pulgadas, 180 Hz, 1 ms GTG, Fast IPS, FreeSync Prem, G-Sync Comp, HDR400.</p>
-            <p class="precio">189,00€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/pantallas/monitor3.jpg" alt="Monitor">
-            <h4>SAMSUNG Odyssey G3 LS27DG300EUXEN</h4>
-            <p>27" Full HD (1920 x 1080, 16:9, 180Hz, 1ms, Panel IPS, AMD FreeSync, Modo Eye Saver, Flicker Free).</p>
-            <p class="precio">119,00€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/mandos/mando1.jpg" alt="Mando">
-            <h4>Xbox Wireless Controller</h4>
-            <p>Electric Volt para Xbox Series X|S, Xbox One, Windows 10/11, iOS y Android.</p>
-            <p class="precio">49,99€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/mandos/mando2.jpg" alt="Mando">
-            <h4>PlayStation 5 DualSense Starlight Blue</h4>
-            <p>Mando Original Sony para PS5 con Retroalimentación Háptica y gatillos Adaptativos.</p>
-            <p class="precio">59,99€</p>
-          </div>
-          <div class="producto">
-            <img src="./img/productos/mandos/mando3.jpg" alt="Mando">
-            <h4>Nintendo Switch - Mando Pro</h4>
-            <p>Controller Edición Limitada The Legend of Zelda: Tears of the Kingdom.</p>
-            <p class="precio">145,00€</p>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- Pie de página -->
-    <footer class="grid-footer" role="contentinfo">
-      <p>&copy; 2025 PixelZone. Todos los derechos reservados.</p>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/pixelzone" target="_blank" aria-label="Facebook">
-          <img src="./img/logos/facebook.png" alt="Facebook">
-        </a>
-        <a href="https://www.twitter.com/pixelzone" target="_blank" aria-label="Twitter">
-          <img src="./img/logos/twitter.png" alt="Twitter">
-        </a>
-        <a href="https://www.instagram.com/pixelzone" target="_blank" aria-label="Instagram">
-          <img src="./img/logos/instagram.png" alt="Instagram">
-        </a>
-        <a href="https://www.tiktok.com/pixelzone" target="_blank" aria-label="TikTok">
-          <img src="./img/logos/tiktok.png" alt="TikTok">
-        </a>
-      </div>
-    </footer>
-
-  </div>
-</body>
-
+      </footer>
+    </div>
+  </body>
 </html>

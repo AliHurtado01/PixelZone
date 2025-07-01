@@ -1,0 +1,13 @@
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.grid-header { grid-area: header; }
+.grid-main   { grid-area: main; padding: 2rem; }
+.grid-footer { grid-area: footer; }

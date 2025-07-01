@@ -1,3 +1,272 @@
+:root {
+  --bg-page: #121212;
+  --bg-dark: #1f1f1f;
+  --bg-bootstrap: #212529;
+  --text-light: #f5f5f5;
+  --text-muted: #aaa;
+  --primary: #35a092;
+  --primary-dark: #27776c;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-light);
+}
+
+main {
+  padding: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.grid-header {
+  grid-area: header;
+}
+
+.grid-main {
+  grid-area: main;
+  padding: 2rem;
+}
+
+.grid-footer {
+  grid-area: footer;
+}
+
+header,
+.sticky-header {
+  background-color: var(--bg-dark);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+}
+
+.logo {
+  height: 40px;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    height: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .logo {
+    height: 100px;
+  }
+}
+header h1 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+/* Bootstrap overrides */
+.navbar {
+  background-color: var(--bg-dark) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--primary-dark);
+}
+
+.navbar-toggler {
+  background-color: var(--primary-dark) !important;
+  border: 1px solid #fff !important;
+  border-radius: 5px !important;
+  padding: 0.4rem 0.6rem !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+/* Bienvenida */
+.bienvenida {
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Destacados */
+.destacados {
+  margin-top: 2rem;
+  padding: 0 1rem;
+}
+
+/* Productos */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  padding: 2rem 0;
+  color: var(--text-light);
+}
+
+.producto {
+  background-color: var(--bg-dark);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.precio {
+  font-weight: bolder;
+  color: var(--primary);
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+/* Carrusel/Banners */
+.banners .carousel-item img {
+  width: 400px;
+  height: auto;
+  object-fit: cover;
+}
+
+#mapa {
+  margin: 4rem auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  overflow: hidden;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.address {
+  margin-top: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+footer {
+  background-color: var(--bg-dark);
+  color: var(--text-muted);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer .social-icons {
+  margin-top: 0.5rem;
+}
+
+footer .social-icons a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+footer .social-icons img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+
+footer .social-icons a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+@media (max-width: 1200px) {
+  .productos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  #navbarMenu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1050;
+    background-color: var(--bg-bootstrap);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+  }
+  .navbar-collapse {
+    justify-content: center;
+  }
+  .productos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  main,
+  .grid-main {
+    padding: 1rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /*# sourceMappingURL=estilos.css.map */

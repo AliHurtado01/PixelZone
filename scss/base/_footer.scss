@@ -1,0 +1,24 @@
+footer {
+  background-color: var(--bg-dark);
+  color: var(--text-muted);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+footer .social-icons {
+  margin-top: 0.5rem;
+}
+footer .social-icons a {
+  margin: 0 0.5rem;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+footer .social-icons img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+}
+footer .social-icons a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}

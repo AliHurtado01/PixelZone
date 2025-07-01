@@ -1,0 +1,58 @@
+@media (max-width: 1200px) {
+  .productos-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 992px) {
+  header h1 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  #navbarMenu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1050;
+    background-color: var(--bg-bootstrap);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+  }
+  .navbar-collapse {
+    justify-content: center;
+  }
+  .productos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  main,
+  .grid-main {
+    padding: 1rem;
+  }
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .productos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+  .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+  iframe {
+    width: 100%;
+    height: auto;
+  }
+  .productos-grid {
+    grid-template-columns: 1fr;
+  }
+}
